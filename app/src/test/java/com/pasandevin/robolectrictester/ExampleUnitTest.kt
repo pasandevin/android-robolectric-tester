@@ -11,24 +11,19 @@ import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 @RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest {
 
 
     @Test
-    fun check_main_activity() {
+    fun check_main_activity_text() {
         val activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
         val textView : TextView = activity.findViewById<TextView>(R.id.text_activity)
-        assertEquals("Hello World!", textView.text)
+        assertEquals("Hello test activity!", textView.text)
     }
 
     @Test
-    fun check_first_fragment(){
+    fun check_first_fragment_text(){
         val fragment = FirstFragment()
         val activity = Robolectric.buildActivity(
             SecondActivity::class.java
@@ -44,11 +39,7 @@ class ExampleUnitTest {
         fragmentTransaction.commit()
 
         val textView : TextView = activity.findViewById<TextView>(R.id.text_fragment)
-        assertEquals("hello first fragment", textView.text)
+        assertEquals("hello test fragment", textView.text)
     }
-
-
-
-
 
 }

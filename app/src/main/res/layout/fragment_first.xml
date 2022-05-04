@@ -10,7 +10,7 @@
         android:id="@+id/text_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello first fragment"
+        android:text="hello test fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
