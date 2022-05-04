@@ -18,14 +18,11 @@ import org.robolectric.RuntimeEnvironment
  */
 @RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
+
 
     @Test
     fun check_main_activity() {
-        val activity: MainActivity = Robolectric.setupActivity(MainActivity::class.java)
+        val activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
         val textView : TextView = activity.findViewById<TextView>(R.id.textView)
         assertEquals("Hello World!", textView.text)
     }
